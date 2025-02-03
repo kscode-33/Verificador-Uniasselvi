@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Certificados</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        input, button { padding: 10px; margin: 5px; }
+        #resultado { font-size: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Verificador de Certificados</h2>
+    <input type="text" id="certNumero" placeholder="Digite o número do certificado">
+    <button onclick="verificarCertificado()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        const certificadosValidos = ["12345", "67890", "teste"]; // Adicione os números válidos aqui
+
+        function verificarCertificado() {
+            const numero = document.getElementById("certNumero").value;
+            const resultado = document.getElementById("resultado");
+            
+            if (certificadosValidos.includes(numero)) {
+                resultado.innerHTML = "✅ Certificado Válido!";
+                resultado.style.color = "green";
+            } else {
+                resultado.innerHTML = "❌ Certificado Inválido!";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
