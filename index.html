@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h2>Verificador de Certificados</h2>
+    <h2>Código de Validação:</h2>
     <input type="text" id="certNumero" placeholder="Digite o número do certificado">
     <button onclick="verificarCertificado()">Verificar</button>
     <p id="resultado"></p>
@@ -24,7 +24,7 @@
             const resultado = document.getElementById("resultado");
             
             if (certificadosValidos.includes(numero)) {
-                resultado.innerHTML = " Certificado Válido!";
+                resultado.innerHTML = " Diploma Ativo";
                 resultado.style.color = "green";
             } else {
                 resultado.innerHTML = "❌ Certificado Inválido!";
